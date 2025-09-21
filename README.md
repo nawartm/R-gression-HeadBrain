@@ -1,90 +1,90 @@
-# 📊 Projet de Régression : Prédire le Poids du Cerveau & les Ventes Publicitaires
+# Regression Project: Predicting Brain Weight and Advertising Sales
 
-> 🧠 *Estimer le poids du cerveau à partir du volume du crâne*  
-> 📺 *Prédire les ventes en fonction des budgets publicitaires (TV, radio, journal)*
+> 🧠 *Estimate brain weight based on skull volume*  
+> 📺 *Predict sales based on advertising budgets (TV, radio, newspaper)*
 
-Ce notebook Jupyter (`Régression.ipynb`) présente **deux études de cas complètes de régression en Machine Learning** :
-1. **Régression simple** : prédire le poids du cerveau humain à partir du volume du crâne.
-2. **Régression multiple** : prédire les ventes d’un produit en fonction des dépenses publicitaires sur différents médias.
-3. **Comparaison de modèles** : régression linéaire, arbres de décision, forêts aléatoires.
-
----
-
-## 🎯 Objectifs du Projet
-
-### 1. 🧠 Régression Simple — HeadBrain Dataset
-> *Peut-on estimer le poids du cerveau d’une personne simplement en mesurant le volume de son crâne ?*
-
-- ✅ Nettoyer les données (valeurs manquantes, doublons, aberrations).
-- ✅ Visualiser la relation entre le volume du crâne et le poids du cerveau.
-- ✅ Construire un modèle de régression linéaire simple.
-- ✅ Évaluer la performance du modèle avec des métriques clés (MAE, MSE, R²…).
-- ✅ Comparer les résultats avec/sans données aberrantes.
-
-### 2. 📺 Régression Multiple — Advertising Dataset
-> *Quel impact ont les budgets publicitaires (TV, radio, journal) sur les ventes ?*
-
-- ✅ Explorer les corrélations entre les variables.
-- ✅ Construire deux modèles :
-  - Modèle complet : `Ventes = f(TV, radio, journal)`
-  - Modèle réduit : `Ventes = f(TV, radio)`
-- ✅ Comparer les performances pour déterminer si la variable "journal" apporte de la valeur.
-- ✅ Tester des modèles plus avancés : **Arbres de décision** et **Forêts aléatoires**.
+This Jupyter notebook (`Regression.ipynb`) presents **two complete case studies in Machine Learning regression**:
+1. **Simple regression**: Predict human brain weight from skull volume.
+2. **Multiple regression**: Predict product sales based on advertising spend across different media.
+3. **Model comparison**: Linear regression, decision trees, and random forests.
 
 ---
 
-## 📚 Pour qui est ce projet ?
+## Project Objectives
 
-| Public | Ce qu’il y trouvera |
-|--------|----------------------|
-| 👩‍🎓 **Étudiants en data / stats / ML** | Un tutoriel complet, étape par étape, avec du code exécutable, des graphiques et des explications claires. Parfait pour apprendre ou réviser. |
-| 👨‍🏫 **Enseignants / Formateurs** | Un support pédagogique prêt à l’emploi pour illustrer la régression linéaire, le nettoyage de données, l’évaluation de modèles. |
-| 👩‍💻 **Data Scientists juniors** | Un exemple concret de pipeline de modélisation : de l’exploration à la comparaison de modèles. |
-| 👔 **Non-techniciens (managers, curieux)** | Des explications simples, des visualisations parlantes, et des résultats concrets pour comprendre comment le Machine Learning peut répondre à des questions business ou scientifiques. |
+### 1. Simple Regression — HeadBrain Dataset
+> *Can we estimate a person’s brain weight simply by measuring their skull volume?*
 
----
+- ✅ Clean data (missing values, duplicates, outliers).
+- ✅ Visualize the relationship between skull volume and brain weight.
+- ✅ Build a simple linear regression model.
+- ✅ Evaluate model performance using key metrics (MAE, MSE, R², etc.).
+- ✅ Compare results with and without outliers.
 
-## ⚙️ Étapes Techniques Réalisées
+### 2. Multiple Regression — Advertising Dataset
+> *What is the impact of advertising budgets (TV, radio, newspaper) on sales?*
 
-### 🔍 Exploration & Nettoyage des Données
-- Lecture avec `pandas`
-- Détection des doublons et valeurs manquantes
-- Visualisation des outliers avec `boxplots` (méthode IQR)
-- Suppression des valeurs aberrantes pour améliorer la qualité du modèle
-
-### 📈 Analyse Visuelle & Statistique
-- Nuages de points (`scatterplot`) pour observer les relations
-- Matrices de corrélation avec `seaborn.heatmap`
-- Pairplots pour visualiser les distributions et relations entre toutes les variables
-
-### 🤖 Modélisation
-#### Régression Linéaire Simple & Multiple
-- Utilisation de `sklearn.linear_model.LinearRegression`
-- Division des données : `train_test_split`
-- Calcul des coefficients (a, b) et interprétation
-- Prédiction sur l’ensemble de test
-
-#### Modèles Avancés
-- **Arbre de décision** : `DecisionTreeRegressor`
-- **Forêt aléatoire** : `RandomForestRegressor`
-
-### 📊 Évaluation des Modèles
-Métriques calculées pour chaque modèle :
-- **MAE** (Mean Absolute Error) → Erreur moyenne absolue
-- **MSE** (Mean Squared Error) → Pénalise les grandes erreurs
-- **RMSE** (Root Mean Squared Error) → Interprétable dans l’unité de la cible
-- **R²** (Coefficient de détermination) → % de variance expliquée (0 à 1, 1 = parfait)
-- **R** (Racine de R²) → Corrélation prédictive
+- ✅ Explore correlations between variables.
+- ✅ Build two models:
+  - Full model: `Sales = f(TV, radio, newspaper)`
+  - Reduced model: `Sales = f(TV, radio)`
+- ✅ Compare performances to determine whether the “newspaper” variable adds value.
+- ✅ Test advanced models: **Decision Trees** and **Random Forests**.
 
 ---
 
-## 🧩 Technologies & Bibliothèques Utilisées
+## Target Audience
+
+| Audience | What They Will Find |
+|----------|----------------------|
+| **Students in Data / Stats / ML** | A complete, step-by-step tutorial with executable code, visualizations, and clear explanations — perfect for learning or review. |
+| **Teachers / Trainers** | A ready-to-use pedagogical resource to illustrate linear regression, data cleaning, and model evaluation. |
+| **Junior Data Scientists** | A practical example of a modeling pipeline: from exploration to model comparison. |
+| **Non-Technical Readers (Managers, Curious)** | Simple explanations, intuitive visualizations, and concrete results to understand how Machine Learning can answer scientific or business questions. |
+
+---
+
+## Technical Steps Implemented
+
+### Data Exploration & Cleaning
+- Load data using `pandas`
+- Detect duplicates and missing values
+- Visualize outliers using `boxplots` (IQR method)
+- Remove outliers to improve model quality
+
+### Visual & Statistical Analysis
+- Scatter plots to observe relationships
+- Correlation matrices using `seaborn.heatmap`
+- Pairplots to visualize distributions and pairwise relationships across all variables
+
+### Modeling
+#### Simple & Multiple Linear Regression
+- Use `sklearn.linear_model.LinearRegression`
+- Split data: `train_test_split`
+- Compute coefficients (a, b) and interpret them
+- Predict on test set
+
+#### Advanced Models
+- **Decision Tree**: `DecisionTreeRegressor`
+- **Random Forest**: `RandomForestRegressor`
+
+### Model Evaluation
+Metrics computed for each model:
+- **MAE** (Mean Absolute Error) → Average absolute error
+- **MSE** (Mean Squared Error) → Penalizes large errors
+- **RMSE** (Root Mean Squared Error) → Interpretable in target unit
+- **R²** (Coefficient of Determination) → % of variance explained (0 to 1, 1 = perfect)
+- **R** (Square root of R²) → Predictive correlation
+
+---
+
+## Technologies & Libraries Used
 
 ```python
-import pandas as pd        # Manipulation des données
-import numpy as np         # Calculs numériques
-import seaborn as sns      # Visualisations statistiques
-import matplotlib.pyplot as plt  # Graphiques
+import pandas as pd        # Data manipulation
+import numpy as np         # Numerical computations
+import seaborn as sns      # Statistical visualizations
+import matplotlib.pyplot as plt  # Plotting
 
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
